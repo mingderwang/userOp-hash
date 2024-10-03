@@ -1,5 +1,3 @@
-import typescriptLogo from './typescript.svg'
-
 export function render() {
   const html = `
     <div>

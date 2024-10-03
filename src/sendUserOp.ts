@@ -26,7 +26,7 @@ export function sendUserOp(element: HTMLButtonElement) {
 
     const paymasterClient = createPaymasterClient({
       transport: http(
-        "https://rpc.zerodev.app/api/v2/paymaster/45a3c5a6-ed17-4244-9af5-ce53e569bc59"
+        import.meta.env.VITE_PAYMASTER_RPC_URL
       ),
     });
 
@@ -34,7 +34,7 @@ export function sendUserOp(element: HTMLButtonElement) {
       account,
       client,
       transport: http(
-        "https://bundler.biconomy.io/api/v2/11155111/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44"
+        import.meta.env.VITE_BUNDLER_RPC_URL
       ),
       paymaster: paymasterClient,
       paymasterContext: {
